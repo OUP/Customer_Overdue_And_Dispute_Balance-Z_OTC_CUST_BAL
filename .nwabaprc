@@ -1,0 +1,13 @@
+{
+    "base": "./dist",
+    "conn_usestrictssl" : false,
+    "conn_server": "http://s4dbasdev110:443",
+    "conn_client" : "110",
+    "conn_user": "BhaskarS",
+    "conn_password": "S4D_130_q02",
+    "abap_package": "ZOTC",
+    "abap_transport": "S4DK906019",
+    "abap_bsp": "Z_OTC_CUST_BAL",
+    "abap_bsp_text": "Customer Overdue & Dispute Application",
+    "calcappindex": true
+}

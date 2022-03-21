@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.4"
+metadata:
+  name: "customer_balance"
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: S4D110
+          auth: basic
+        credentials:
+          username: env:110_USER
+          password: env:110_PASSWORD
+        app:
+          name: Z_OTC_CUST_BAL
+          description: Customer Overdue & Dispute Application
+          package: ZOTC
+          transport: S4DK906019
